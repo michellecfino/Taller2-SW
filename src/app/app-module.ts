@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { SerieModule } from './serie/serie-module';
+import { HttpClientModule } from '@angular/common/http';
+import { SerieListar } from "./serie/serie-listar/serie-listar";
 
 @NgModule({
   declarations: [
@@ -10,8 +13,9 @@ import { App } from './app';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule, SerieModule, HttpClientModule,
+    SerieListar
+],
   providers: [
     provideBrowserGlobalErrorListeners()
   ],
